@@ -1,7 +1,16 @@
-.test {
+.love-potion {
   size: 20px;
-  color: aqua;
   margin:auto;
   width: 960px;
   padding: 1% 0 1% 0;
 }
+
+.testFormInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+

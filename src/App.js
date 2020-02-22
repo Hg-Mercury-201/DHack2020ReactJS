@@ -6,7 +6,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="love-potion">
-              <p className="test">Hello World</p>
+                <h1>Love Potion</h1>
               <InputForm />
             </div>
         );
@@ -27,9 +27,27 @@ class InputForm extends React.Component {
     renderTextForm() {
         return(
         <div className="textForm">
-          <form className="testForm">
-            <input type="text" />
-          </form>
+            <form className="testForm">
+                <label>Eye Color</label>
+                <input className="testFormInput" type="text"/>
+                <label>Skin Color</label>
+                <input className="testFormInput" type="text"/>
+                <label>Hair Color</label>
+                <input className="testFormInput" type="text"/>
+                <label>Face Height</label>
+                <input className="testFormInput" type="text"/>
+                <label>Face Width</label>
+                <input className="testFormInput" type="text"/>
+                <label>Forehead Size</label>
+                <input className="testFormInput" type="text"/>
+                <label>Chin Size</label>
+                <input className="testFormInput" type="text"/>
+                <label>Lip Size</label>
+                <input className="testFormInput" type="text"/>
+                <label>Eye Height</label>
+                <input className="testFormInput" type="text"/>
+                <button className="submit" type="submit">Submit</button>
+            </form>
         </div>
         );
     }
@@ -37,7 +55,7 @@ class InputForm extends React.Component {
     renderImageInput() {
       return(
         <div className="ImageInput">
-          <input type="image"></input>
+          <input type="image" alt="imageInput"></input>
         </div>
       );
     }
