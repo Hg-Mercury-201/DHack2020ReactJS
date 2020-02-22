@@ -10,19 +10,31 @@ class App extends React.Component {
             </div>
         );
     }
+}
 
-    inputImage() {
+class InputForm extends React.Component {
 
+    render() {
+        return(
+        <div className="InputForm">
+
+        </div>
+        );
     }
 
-    inputText() {
-
+    renderTextForm() {
+        return(
+        <div className="textForm">
+            <form className="testForm">
+                <input type="text" />
+            </form>
+        </div>
+        );
     }
 
-    displayOutput() {
+    renderImageInput() {
 
     }
-
 
 }
 
