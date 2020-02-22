@@ -4,13 +4,26 @@ import './App.css';
 class App extends React.Component {
 
     render() {
-        return(
+        return (
             <div className="love-potion">
-                <p>Hello World</p>
+                <p className="test">Hello World</p>
             </div>
-
         );
     }
+
+    inputImage() {
+
+    }
+
+    inputText() {
+
+    }
+
+    displayOutput() {
+
+    }
+
+
 }
 
 export default App;
