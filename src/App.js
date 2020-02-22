@@ -10,7 +10,6 @@ function App() {
         <p>
          Start Love Potion!
         </p>
-        </a>
       </header>
     </div>
   );
