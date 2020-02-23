@@ -1,4 +1,5 @@
 import React from "react";
+
 const axios = require("axios");
 
 
@@ -7,14 +8,14 @@ export class InputForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-                'Eye Color': '',
-                'Skin Color': '',
-                'Hair Color': '',
-                'Face Ratio': '',
-                'Forehead Size': '',
-                'Chin Size': '',
-                'Lip Size': '',
-                'Eye Height': '',
+            'Eye Color': '',
+            'Skin Color': '',
+            'Hair Color': '',
+            'Face Ratio': '',
+            'Forehead Size': '',
+            'Chin Size': '',
+            'Lip Size': '',
+            'Eye Height': '',
             file: null
         };
 
@@ -37,24 +38,24 @@ export class InputForm extends React.Component {
             .then((response) => {
                 alert("The file is successfully uploaded");
             }).catch((error) => {
-                console.log(error);
-                console.log("error thrown");
+            console.log(error);
+            console.log("error thrown");
         });
     }
 
-    onFileChange(e){
-      this.setState({file:e.target.files[0]});
+    onFileChange(e) {
+        this.setState({file: e.target.files[0]});
     }
 
     handleChange(event) {
-        this.setState({ [event.target.name]: event.target.value });
-        console.log('state ',this.state);
+        this.setState({[event.target.name]: event.target.value});
+        console.log('state ', this.state);
     }
 
     handleSubmit(event) {
         event.preventDefault();
         const formData = new FormData();
-        for (let i = 0; i<7; i++)
+        for (let i = 0; i < 7; i++)
             formData.append('textSubmission', this.state[i]);
         const config = {
             headers: {
@@ -70,54 +71,55 @@ export class InputForm extends React.Component {
     }
 
     render() {
-        return(
-          <div className="InputForm">
-            {this.renderTextForm()}
-            {this.renderImageInput()}
+        return (
+            <div className="InputForm">
+                {this.renderTextForm()}
+                {this.renderImageInput()}
 
-          </div>
+            </div>
         );
     }
 
     renderTextForm() {
-        return(
-        <div className="textForm">
-            <form className="testForm" onSubmit={this.handleSubmit}>
-                <label>
-                    Eye Color
-                    <input className="testFormInput" name="eyeColor" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Skin Color
-                    <input className="testFormInput" name="skinColor" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Hair Color
-                    <input className="testFormInput" name="hairColor" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Face Ratio
-                    <input className="testFormInput" name="faceRatio" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Forehead Size
-                    <input className="testFormInput" name="foreheadSize" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Chin Size
-                    <input className="testFormInput" name="chinSize" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Lip Size
-                    <input className="testFormInput" name="lipSize" type="text" onChange={this.handleChange} />
-                </label>
-                <label>
-                    Eye Height
-                    <input className="testFormInput" name="eyeHeight" type="text" onChange={this.handleChange} />
-                </label>
-                <input className="submit" type="submit" value="Submit"/>
-            </form>
-        </div>
+        return (
+            <div className="textForm">
+                <h3>Manual Input</h3>
+                <form className="testForm" onSubmit={this.handleSubmit}>
+                    <label>
+                        Eye Color
+                        <input className="testFormInput" name="eyeColor" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Skin Color
+                        <input className="testFormInput" name="skinColor" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Hair Color
+                        <input className="testFormInput" name="hairColor" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Face Ratio
+                        <input className="testFormInput" name="faceRatio" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Forehead Size
+                        <input className="testFormInput" name="foreheadSize" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Chin Size
+                        <input className="testFormInput" name="chinSize" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Lip Size
+                        <input className="testFormInput" name="lipSize" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Eye Height
+                        <input className="testFormInput" name="eyeHeight" type="text" onChange={this.handleChange}/>
+                    </label>
+                    <input className="submit" type="submit" value="Submit"/>
+                </form>
+            </div>
         );
     }
 
@@ -125,7 +127,7 @@ export class InputForm extends React.Component {
         return (
             <div className="ImageInput">
                 <form onSubmit={this.onFormSubmit}>
-                    <h1>File Upload</h1>
+                    <h3>File Upload</h3>
                     <input type='file' name='submitImage' onChange={this.onFileChange}/>
                     <button type='submit'>Upload</button>
                 </form>

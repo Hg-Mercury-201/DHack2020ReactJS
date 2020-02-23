@@ -7,7 +7,9 @@ class App extends React.Component {
     render() {
         return (
             <div className="love-potion">
-                <h1>Love Potion</h1>
+                <div className="titleHeader">
+                    <h1>Love Potion</h1>
+                </div>
               <InputForm />
             </div>
         );
