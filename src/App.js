@@ -53,9 +53,17 @@ class InputForm extends React.Component {
     }
 
     renderImageInput() {
+
+
+
+
+
+
+
       return(
         <div className="ImageInput">
-          <input type="image" alt="imageInput"></input>
+          <input type='file' />
+          <button>Upload</button>
         </div>
       );
     }
