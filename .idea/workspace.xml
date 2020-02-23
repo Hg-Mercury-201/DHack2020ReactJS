@@ -55,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582399354638</updated>
-      <workItem from="1582399355971" duration="13688000" />
+      <workItem from="1582399355971" duration="13949000" />
     </task>
     <task id="LOCAL-00001" summary="Class component skeletal">
       <created>1582410093151</created>
@@ -78,23 +78,49 @@
       <option name="project" value="LOCAL" />
       <updated>1582420065994</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="State management with constructor HTML form update">
+      <created>1582420865728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582420865728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="State management with constructor HTML form update">
+      <created>1582420928767</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582420928767</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Class component skeletal" />
     <MESSAGE value="Built out HTML for text entry web form" />
     <MESSAGE value="Started state management with constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started state management with constructor" />
+    <MESSAGE value="State management with constructor HTML form update" />
+    <option name="LAST_COMMIT_MESSAGE" value="State management with constructor HTML form update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="139" key="CommitChangelistDialog2" timestamp="1582420865612">
+    <state x="423" y="139" key="CommitChangelistDialog2" timestamp="1582420928675">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="423" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420865612" />
+    <state x="423" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420928675" />
     <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1582420867528">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
