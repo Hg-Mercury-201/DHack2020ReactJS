@@ -33,6 +33,7 @@ class InputForm extends React.Component {
     }
 
     handleChange(event) {
+        alert('handleChange function');
         this.setState({ [event.target.name]: event.target.value });
     }
 
@@ -56,35 +57,35 @@ class InputForm extends React.Component {
             <form className="testForm">
                 <label>
                     Eye Color
-                    <input className="testFormInput" name="EyeColor" type="text"/>
+                    <input className="testFormInput" name="eyeColor" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Skin Color
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="skinColor" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Hair Color
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="hairColor" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Face Ratio
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="faceRatio" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Forehead Size
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="foreheadSize" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Chin Size
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="chinSize" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Lip Size
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="lipSize" type="text" onChange={this.handleChange} />
                 </label>
                 <label>
                     Eye Height
-                    <input className="testFormInput" type="text"/>
+                    <input className="testFormInput" name="eyeHeight" type="text" onChange={this.handleChange} />
                 </label>
                 <input className="submit" type="submit" value="Submit"/>
             </form>
