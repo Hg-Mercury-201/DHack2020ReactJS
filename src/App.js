@@ -33,12 +33,12 @@ class InputForm extends React.Component {
     }
 
     handleChange(event) {
-        alert('handleChange function');
         this.setState({ [event.target.name]: event.target.value });
+        console.log('state ',this.state);
     }
 
     handleSubmit(event) {
-        alert('A form was submitted: ' + this.state.value);
+        alert('A form was submitted: ' + this.state);
         event.preventDefault();
     }
 
@@ -54,7 +54,7 @@ class InputForm extends React.Component {
     renderTextForm() {
         return(
         <div className="textForm">
-            <form className="testForm">
+            <form className="testForm" onSubmit={this.handleSubmit}>
                 <label>
                     Eye Color
                     <input className="testFormInput" name="eyeColor" type="text" onChange={this.handleChange} />
