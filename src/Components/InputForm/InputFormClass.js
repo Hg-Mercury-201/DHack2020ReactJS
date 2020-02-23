@@ -7,14 +7,14 @@ export class InputForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            'Eye Color': '',
-            'Skin Color': '',
-            'Hair Color': '',
-            'Face Ratio': '',
-            'Forehead Size': '',
-            'Chin Size': '',
-            'Lip Size': '',
-            'Eye Height': '',
+                'Eye Color': '',
+                'Skin Color': '',
+                'Hair Color': '',
+                'Face Ratio': '',
+                'Forehead Size': '',
+                'Chin Size': '',
+                'Lip Size': '',
+                'Eye Height': '',
             file: null
         };
 
@@ -33,10 +33,12 @@ export class InputForm extends React.Component {
                 'content-type': 'multipart/form-data'
             }
         };
-        axios.post("/upload", formData, config)
+        axios.get("iamtim.dev/lovepotion/love-server", config)
             .then((response) => {
                 alert("The file is successfully uploaded");
             }).catch((error) => {
+                console.log(error);
+                console.log("error thrown");
         });
     }
 
@@ -50,8 +52,21 @@ export class InputForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('A form was submitted: ' + this.state);
         event.preventDefault();
+        const formData = new FormData();
+        for (let i = 0; i<7; i++)
+            formData.append('textSubmission', this.state[i]);
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        };
+        axios.post("/upload", formData, config)
+            .then((response) => {
+                console.log("The text fields are successfully uploaded");
+            }).catch((error) => {
+            console.log("error thrown");
+        });
     }
 
     render() {
