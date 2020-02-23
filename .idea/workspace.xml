@@ -91,13 +91,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Started state management with constructor" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="139" key="CommitChangelistDialog2" timestamp="1582420065892">
+    <state x="423" y="139" key="CommitChangelistDialog2" timestamp="1582420865612">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="423" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420065892" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1582420073797">
+    <state x="423" y="139" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420865612" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1582420867528">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420073797" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1582420867528" />
   </component>
 </project>
