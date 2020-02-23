@@ -15,30 +15,32 @@ export class InputForm extends React.Component {
             'Chin Size': '',
             'Lip Size': '',
             'Eye Height': '',
-            file:null
+            file: null
         };
+
         this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.onChange = this.onChange.bind(this);
+        this.onFileChange = this.onFileChange.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    onFormSubmit(e){
-      e.preventDefault();
-      const formData = new FormData();
-      formData.append('myImage',this.state.file);
-      const config = {
-        headers: {
-          'content-type':'multipart/form-data'
-        }
-      };
-      axios.post("/upload",formData,config)
-        .then((response) => {
-          alert("The file is successfully uploaded");
-        }).catch((error) =>{
-      });
+    onFormSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('myImage', this.state.file);
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        };
+        axios.post("/upload", formData, config)
+            .then((response) => {
+                alert("The file is successfully uploaded");
+            }).catch((error) => {
+        });
     }
-    onChange(e){
+
+    onFileChange(e){
       this.setState({file:e.target.files[0]});
     }
 
@@ -105,16 +107,16 @@ export class InputForm extends React.Component {
     }
 
     renderImageInput() {
-      return(
-        <div className="ImageInput">
-        <form onSubmit={this.onFormSubmit}>
-        <h1>File Upload</h1>
-        <input type='file' name='submitImage' onChange={this.onChange} />
-        <button type='submit'>Upload</button>
-        </form>
+        return (
+            <div className="ImageInput">
+                <form onSubmit={this.onFormSubmit}>
+                    <h1>File Upload</h1>
+                    <input type='file' name='submitImage' onChange={this.onFileChange}/>
+                    <button type='submit'>Upload</button>
+                </form>
 
-        </div>
-      );
+            </div>
+        );
     }
 
 }
