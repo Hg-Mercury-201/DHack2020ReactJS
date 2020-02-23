@@ -15,6 +15,32 @@ class App extends React.Component {
 
 class InputForm extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            'Eye Color': '',
+            'Skin Color': '',
+            'Hair Color': '',
+            'Face Ratio': '',
+            'Forehead Size': '',
+            'Chin Size': '',
+            'Lip Size': '',
+            'Eye Height': ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({ [event.target.name]: event.target.value });
+    }
+
+    handleSubmit(event) {
+        alert('A form was submitted: ' + this.state.value);
+        event.preventDefault();
+    }
+
     render() {
         return(
           <div className="InputForm">
@@ -28,25 +54,39 @@ class InputForm extends React.Component {
         return(
         <div className="textForm">
             <form className="testForm">
-                <label>Eye Color</label>
-                <input className="testFormInput" type="text"/>
-                <label>Skin Color</label>
-                <input className="testFormInput" type="text"/>
-                <label>Hair Color</label>
-                <input className="testFormInput" type="text"/>
-                <label>Face Height</label>
-                <input className="testFormInput" type="text"/>
-                <label>Face Width</label>
-                <input className="testFormInput" type="text"/>
-                <label>Forehead Size</label>
-                <input className="testFormInput" type="text"/>
-                <label>Chin Size</label>
-                <input className="testFormInput" type="text"/>
-                <label>Lip Size</label>
-                <input className="testFormInput" type="text"/>
-                <label>Eye Height</label>
-                <input className="testFormInput" type="text"/>
-                <button className="submit" type="submit">Submit</button>
+                <label>
+                    Eye Color
+                    <input className="testFormInput" name="EyeColor" type="text"/>
+                </label>
+                <label>
+                    Skin Color
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Hair Color
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Face Ratio
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Forehead Size
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Chin Size
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Lip Size
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <label>
+                    Eye Height
+                    <input className="testFormInput" type="text"/>
+                </label>
+                <input className="submit" type="submit" value="Submit"/>
             </form>
         </div>
         );
